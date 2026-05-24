@@ -43,7 +43,6 @@
             txbPuntosR = new TextBox();
             lbTipoR = new Label();
             lbImagenR = new Label();
-            lbDisponibleR = new Label();
             txbStockR = new TextBox();
             cbTipoR = new ComboBox();
             textBox1 = new TextBox();
@@ -59,15 +58,15 @@
             // DgDatosRecom
             // 
             DgDatosRecom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgDatosRecom.Location = new Point(496, 12);
+            DgDatosRecom.Location = new Point(37, 30);
             DgDatosRecom.Name = "DgDatosRecom";
             DgDatosRecom.RowHeadersWidth = 82;
-            DgDatosRecom.Size = new Size(924, 381);
+            DgDatosRecom.Size = new Size(1366, 381);
             DgDatosRecom.TabIndex = 0;
             // 
             // btnActualizarR
             // 
-            btnActualizarR.Location = new Point(819, 469);
+            btnActualizarR.Location = new Point(553, 728);
             btnActualizarR.Name = "btnActualizarR";
             btnActualizarR.Size = new Size(200, 94);
             btnActualizarR.TabIndex = 1;
@@ -77,7 +76,7 @@
             // 
             // btnAgregarR
             // 
-            btnAgregarR.Location = new Point(537, 469);
+            btnAgregarR.Location = new Point(295, 728);
             btnAgregarR.Name = "btnAgregarR";
             btnAgregarR.Size = new Size(200, 94);
             btnAgregarR.TabIndex = 2;
@@ -87,7 +86,7 @@
             // 
             // btnEliminarR
             // 
-            btnEliminarR.Location = new Point(1097, 469);
+            btnEliminarR.Location = new Point(791, 728);
             btnEliminarR.Name = "btnEliminarR";
             btnEliminarR.Size = new Size(200, 94);
             btnEliminarR.TabIndex = 3;
@@ -98,7 +97,7 @@
             // lbIDR
             // 
             lbIDR.AutoSize = true;
-            lbIDR.Location = new Point(37, 46);
+            lbIDR.Location = new Point(37, 434);
             lbIDR.Name = "lbIDR";
             lbIDR.Size = new Size(42, 32);
             lbIDR.TabIndex = 4;
@@ -107,7 +106,7 @@
             // lbNombreR
             // 
             lbNombreR.AutoSize = true;
-            lbNombreR.Location = new Point(37, 141);
+            lbNombreR.Location = new Point(323, 434);
             lbNombreR.Name = "lbNombreR";
             lbNombreR.Size = new Size(107, 32);
             lbNombreR.TabIndex = 5;
@@ -116,7 +115,7 @@
             // lbDescripcionR
             // 
             lbDescripcionR.AutoSize = true;
-            lbDescripcionR.Location = new Point(37, 248);
+            lbDescripcionR.Location = new Point(727, 434);
             lbDescripcionR.Name = "lbDescripcionR";
             lbDescripcionR.Size = new Size(143, 32);
             lbDescripcionR.TabIndex = 6;
@@ -125,7 +124,7 @@
             // lbStockR
             // 
             lbStockR.AutoSize = true;
-            lbStockR.Location = new Point(37, 462);
+            lbStockR.Location = new Point(323, 544);
             lbStockR.Name = "lbStockR";
             lbStockR.Size = new Size(76, 32);
             lbStockR.TabIndex = 7;
@@ -135,7 +134,7 @@
             // lbPuntosR
             // 
             lbPuntosR.AutoSize = true;
-            lbPuntosR.Location = new Point(37, 349);
+            lbPuntosR.Location = new Point(37, 544);
             lbPuntosR.Name = "lbPuntosR";
             lbPuntosR.Size = new Size(92, 32);
             lbPuntosR.TabIndex = 8;
@@ -143,28 +142,28 @@
             // 
             // txbIDR
             // 
-            txbIDR.Location = new Point(37, 81);
+            txbIDR.Location = new Point(37, 469);
             txbIDR.Name = "txbIDR";
             txbIDR.Size = new Size(224, 39);
             txbIDR.TabIndex = 9;
             // 
             // txbNombreR
             // 
-            txbNombreR.Location = new Point(37, 176);
+            txbNombreR.Location = new Point(323, 469);
             txbNombreR.Name = "txbNombreR";
-            txbNombreR.Size = new Size(224, 39);
+            txbNombreR.Size = new Size(320, 39);
             txbNombreR.TabIndex = 10;
             // 
             // txbDescripcionR
             // 
-            txbDescripcionR.Location = new Point(37, 283);
+            txbDescripcionR.Location = new Point(727, 469);
             txbDescripcionR.Name = "txbDescripcionR";
-            txbDescripcionR.Size = new Size(224, 39);
+            txbDescripcionR.Size = new Size(496, 39);
             txbDescripcionR.TabIndex = 11;
             // 
             // txbPuntosR
             // 
-            txbPuntosR.Location = new Point(37, 497);
+            txbPuntosR.Location = new Point(323, 579);
             txbPuntosR.Name = "txbPuntosR";
             txbPuntosR.Size = new Size(224, 39);
             txbPuntosR.TabIndex = 12;
@@ -172,7 +171,7 @@
             // lbTipoR
             // 
             lbTipoR.AutoSize = true;
-            lbTipoR.Location = new Point(37, 565);
+            lbTipoR.Location = new Point(611, 529);
             lbTipoR.Name = "lbTipoR";
             lbTipoR.Size = new Size(66, 32);
             lbTipoR.TabIndex = 14;
@@ -181,24 +180,15 @@
             // lbImagenR
             // 
             lbImagenR.AutoSize = true;
-            lbImagenR.Location = new Point(37, 679);
+            lbImagenR.Location = new Point(901, 528);
             lbImagenR.Name = "lbImagenR";
             lbImagenR.Size = new Size(99, 32);
             lbImagenR.TabIndex = 15;
             lbImagenR.Text = "Imagen:";
             // 
-            // lbDisponibleR
-            // 
-            lbDisponibleR.AutoSize = true;
-            lbDisponibleR.Location = new Point(47, 807);
-            lbDisponibleR.Name = "lbDisponibleR";
-            lbDisponibleR.Size = new Size(133, 32);
-            lbDisponibleR.TabIndex = 16;
-            lbDisponibleR.Text = "Disponible:";
-            // 
             // txbStockR
             // 
-            txbStockR.Location = new Point(37, 384);
+            txbStockR.Location = new Point(37, 579);
             txbStockR.Name = "txbStockR";
             txbStockR.Size = new Size(224, 39);
             txbStockR.TabIndex = 13;
@@ -206,14 +196,14 @@
             // cbTipoR
             // 
             cbTipoR.FormattingEnabled = true;
-            cbTipoR.Location = new Point(37, 614);
+            cbTipoR.Location = new Point(611, 578);
             cbTipoR.Name = "cbTipoR";
             cbTipoR.Size = new Size(242, 40);
             cbTipoR.TabIndex = 17;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(37, 729);
+            textBox1.Location = new Point(901, 578);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(224, 39);
             textBox1.TabIndex = 20;
@@ -221,7 +211,7 @@
             // Disponible
             // 
             Disponible.AutoSize = true;
-            Disponible.Location = new Point(47, 857);
+            Disponible.Location = new Point(40, 663);
             Disponible.Name = "Disponible";
             Disponible.Size = new Size(89, 36);
             Disponible.TabIndex = 18;
@@ -230,7 +220,7 @@
             // 
             // btnMostrarR
             // 
-            btnMostrarR.Location = new Point(537, 614);
+            btnMostrarR.Location = new Point(37, 852);
             btnMostrarR.Name = "btnMostrarR";
             btnMostrarR.Size = new Size(200, 94);
             btnMostrarR.TabIndex = 21;
@@ -239,7 +229,7 @@
             // 
             // btnbuscarR
             // 
-            btnbuscarR.Location = new Point(819, 614);
+            btnbuscarR.Location = new Point(40, 728);
             btnbuscarR.Name = "btnbuscarR";
             btnbuscarR.Size = new Size(200, 94);
             btnbuscarR.TabIndex = 22;
@@ -249,7 +239,7 @@
             // 
             // btnLimpiarR
             // 
-            btnLimpiarR.Location = new Point(1097, 614);
+            btnLimpiarR.Location = new Point(1023, 728);
             btnLimpiarR.Name = "btnLimpiarR";
             btnLimpiarR.Size = new Size(200, 94);
             btnLimpiarR.TabIndex = 23;
@@ -260,7 +250,7 @@
             // lbCategoriaR
             // 
             lbCategoriaR.AutoSize = true;
-            lbCategoriaR.Location = new Point(37, 936);
+            lbCategoriaR.Location = new Point(1179, 527);
             lbCategoriaR.Name = "lbCategoriaR";
             lbCategoriaR.Size = new Size(144, 32);
             lbCategoriaR.TabIndex = 24;
@@ -268,7 +258,7 @@
             // 
             // txbCategoriaR
             // 
-            txbCategoriaR.Location = new Point(37, 988);
+            txbCategoriaR.Location = new Point(1179, 579);
             txbCategoriaR.Name = "txbCategoriaR";
             txbCategoriaR.Size = new Size(224, 39);
             txbCategoriaR.TabIndex = 25;
@@ -277,7 +267,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1432, 1073);
+            ClientSize = new Size(1454, 1003);
             Controls.Add(txbCategoriaR);
             Controls.Add(lbCategoriaR);
             Controls.Add(btnLimpiarR);
@@ -286,7 +276,6 @@
             Controls.Add(textBox1);
             Controls.Add(Disponible);
             Controls.Add(cbTipoR);
-            Controls.Add(lbDisponibleR);
             Controls.Add(lbImagenR);
             Controls.Add(lbTipoR);
             Controls.Add(txbStockR);
@@ -328,7 +317,6 @@
         private TextBox txbPuntosR;
         private Label lbTipoR;
         private Label lbImagenR;
-        private Label lbDisponibleR;
         private TextBox txbStockR;
         private ComboBox cbTipoR;
         private TextBox textBox1;

@@ -34,7 +34,6 @@
             lbPuntosL = new Label();
             lbRequisitosL = new Label();
             lbCategoriaL = new Label();
-            lbActivoL = new Label();
             txbNombreL = new TextBox();
             txbDescripcionL = new TextBox();
             txbPuntosL = new TextBox();
@@ -58,16 +57,16 @@
             // dgDatosLog
             // 
             dgDatosLog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgDatosLog.Location = new Point(355, 28);
+            dgDatosLog.Location = new Point(36, 28);
             dgDatosLog.Name = "dgDatosLog";
             dgDatosLog.RowHeadersWidth = 82;
-            dgDatosLog.Size = new Size(1086, 376);
+            dgDatosLog.Size = new Size(1486, 376);
             dgDatosLog.TabIndex = 0;
             // 
             // lbNombreL
             // 
             lbNombreL.AutoSize = true;
-            lbNombreL.Location = new Point(36, 28);
+            lbNombreL.Location = new Point(36, 443);
             lbNombreL.Name = "lbNombreL";
             lbNombreL.Size = new Size(107, 32);
             lbNombreL.TabIndex = 2;
@@ -76,7 +75,7 @@
             // lbDescripcionL
             // 
             lbDescripcionL.AutoSize = true;
-            lbDescripcionL.Location = new Point(36, 124);
+            lbDescripcionL.Location = new Point(333, 443);
             lbDescripcionL.Name = "lbDescripcionL";
             lbDescripcionL.Size = new Size(143, 32);
             lbDescripcionL.TabIndex = 3;
@@ -85,7 +84,7 @@
             // lbPuntosL
             // 
             lbPuntosL.AutoSize = true;
-            lbPuntosL.Location = new Point(36, 218);
+            lbPuntosL.Location = new Point(36, 540);
             lbPuntosL.Name = "lbPuntosL";
             lbPuntosL.Size = new Size(92, 32);
             lbPuntosL.TabIndex = 4;
@@ -94,7 +93,7 @@
             // lbRequisitosL
             // 
             lbRequisitosL.AutoSize = true;
-            lbRequisitosL.Location = new Point(36, 322);
+            lbRequisitosL.Location = new Point(1246, 443);
             lbRequisitosL.Name = "lbRequisitosL";
             lbRequisitosL.Size = new Size(127, 32);
             lbRequisitosL.TabIndex = 5;
@@ -103,45 +102,36 @@
             // lbCategoriaL
             // 
             lbCategoriaL.AutoSize = true;
-            lbCategoriaL.Location = new Point(36, 416);
+            lbCategoriaL.Location = new Point(914, 442);
             lbCategoriaL.Name = "lbCategoriaL";
             lbCategoriaL.Size = new Size(121, 32);
             lbCategoriaL.TabIndex = 6;
             lbCategoriaL.Text = "Categoria:";
             // 
-            // lbActivoL
-            // 
-            lbActivoL.AutoSize = true;
-            lbActivoL.Location = new Point(36, 517);
-            lbActivoL.Name = "lbActivoL";
-            lbActivoL.Size = new Size(85, 32);
-            lbActivoL.TabIndex = 7;
-            lbActivoL.Text = "Activo:";
-            // 
             // txbNombreL
             // 
-            txbNombreL.Location = new Point(36, 63);
+            txbNombreL.Location = new Point(36, 478);
             txbNombreL.Name = "txbNombreL";
             txbNombreL.Size = new Size(242, 39);
             txbNombreL.TabIndex = 8;
             // 
             // txbDescripcionL
             // 
-            txbDescripcionL.Location = new Point(36, 159);
+            txbDescripcionL.Location = new Point(333, 478);
             txbDescripcionL.Name = "txbDescripcionL";
-            txbDescripcionL.Size = new Size(242, 39);
+            txbDescripcionL.Size = new Size(500, 39);
             txbDescripcionL.TabIndex = 9;
             // 
             // txbPuntosL
             // 
-            txbPuntosL.Location = new Point(36, 253);
+            txbPuntosL.Location = new Point(36, 575);
             txbPuntosL.Name = "txbPuntosL";
             txbPuntosL.Size = new Size(242, 39);
             txbPuntosL.TabIndex = 10;
             // 
             // txbRequisitosL
             // 
-            txbRequisitosL.Location = new Point(36, 357);
+            txbRequisitosL.Location = new Point(1246, 478);
             txbRequisitosL.Name = "txbRequisitosL";
             txbRequisitosL.Size = new Size(242, 39);
             txbRequisitosL.TabIndex = 11;
@@ -149,7 +139,7 @@
             // cmbCategoriaL
             // 
             cmbCategoriaL.FormattingEnabled = true;
-            cmbCategoriaL.Location = new Point(36, 451);
+            cmbCategoriaL.Location = new Point(914, 477);
             cmbCategoriaL.Name = "cmbCategoriaL";
             cmbCategoriaL.Size = new Size(242, 40);
             cmbCategoriaL.TabIndex = 12;
@@ -157,7 +147,7 @@
             // cbActivoL
             // 
             cbActivoL.AutoSize = true;
-            cbActivoL.Location = new Point(36, 564);
+            cbActivoL.Location = new Point(371, 577);
             cbActivoL.Name = "cbActivoL";
             cbActivoL.Size = new Size(89, 36);
             cbActivoL.TabIndex = 13;
@@ -166,7 +156,7 @@
             // 
             // btnAgregarL
             // 
-            btnAgregarL.Location = new Point(425, 451);
+            btnAgregarL.Location = new Point(533, 561);
             btnAgregarL.Name = "btnAgregarL";
             btnAgregarL.Size = new Size(174, 64);
             btnAgregarL.TabIndex = 14;
@@ -176,7 +166,7 @@
             // 
             // btnActualizarL
             // 
-            btnActualizarL.Location = new Point(677, 451);
+            btnActualizarL.Location = new Point(785, 561);
             btnActualizarL.Name = "btnActualizarL";
             btnActualizarL.Size = new Size(174, 64);
             btnActualizarL.TabIndex = 15;
@@ -186,7 +176,7 @@
             // 
             // btnEliminarL
             // 
-            btnEliminarL.Location = new Point(933, 450);
+            btnEliminarL.Location = new Point(1041, 560);
             btnEliminarL.Name = "btnEliminarL";
             btnEliminarL.Size = new Size(174, 66);
             btnEliminarL.TabIndex = 16;
@@ -196,7 +186,7 @@
             // 
             // btnLimpiarL
             // 
-            btnLimpiarL.Location = new Point(1193, 451);
+            btnLimpiarL.Location = new Point(1301, 561);
             btnLimpiarL.Name = "btnLimpiarL";
             btnLimpiarL.Size = new Size(174, 66);
             btnLimpiarL.TabIndex = 17;
@@ -206,7 +196,7 @@
             // 
             // txbUsuarioL
             // 
-            txbUsuarioL.Location = new Point(36, 724);
+            txbUsuarioL.Location = new Point(36, 805);
             txbUsuarioL.Name = "txbUsuarioL";
             txbUsuarioL.Size = new Size(242, 39);
             txbUsuarioL.TabIndex = 18;
@@ -214,7 +204,7 @@
             // lbUsuarioL
             // 
             lbUsuarioL.AutoSize = true;
-            lbUsuarioL.Location = new Point(36, 664);
+            lbUsuarioL.Location = new Point(36, 745);
             lbUsuarioL.Name = "lbUsuarioL";
             lbUsuarioL.Size = new Size(129, 32);
             lbUsuarioL.TabIndex = 19;
@@ -223,7 +213,7 @@
             // lbLogroL
             // 
             lbLogroL.AutoSize = true;
-            lbLogroL.Location = new Point(36, 790);
+            lbLogroL.Location = new Point(348, 770);
             lbLogroL.Name = "lbLogroL";
             lbLogroL.Size = new Size(80, 32);
             lbLogroL.TabIndex = 20;
@@ -232,7 +222,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(36, 825);
+            comboBox1.Location = new Point(348, 805);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(242, 40);
             comboBox1.TabIndex = 21;
@@ -240,15 +230,15 @@
             // dgvLogrosUsuarios
             // 
             dgvLogrosUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLogrosUsuarios.Location = new Point(355, 664);
+            dgvLogrosUsuarios.Location = new Point(36, 909);
             dgvLogrosUsuarios.Name = "dgvLogrosUsuarios";
             dgvLogrosUsuarios.RowHeadersWidth = 82;
-            dgvLogrosUsuarios.Size = new Size(1086, 300);
+            dgvLogrosUsuarios.Size = new Size(1486, 300);
             dgvLogrosUsuarios.TabIndex = 22;
             // 
             // btnAsignarL
             // 
-            btnAsignarL.Location = new Point(784, 1013);
+            btnAsignarL.Location = new Point(668, 773);
             btnAsignarL.Name = "btnAsignarL";
             btnAsignarL.Size = new Size(228, 72);
             btnAsignarL.TabIndex = 23;
@@ -260,7 +250,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1466, 1132);
+            ClientSize = new Size(1572, 1272);
             Controls.Add(btnAsignarL);
             Controls.Add(dgvLogrosUsuarios);
             Controls.Add(comboBox1);
@@ -277,7 +267,6 @@
             Controls.Add(txbPuntosL);
             Controls.Add(txbDescripcionL);
             Controls.Add(txbNombreL);
-            Controls.Add(lbActivoL);
             Controls.Add(lbCategoriaL);
             Controls.Add(lbRequisitosL);
             Controls.Add(lbPuntosL);
@@ -300,7 +289,6 @@
         private Label lbPuntosL;
         private Label lbRequisitosL;
         private Label lbCategoriaL;
-        private Label lbActivoL;
         private TextBox txbNombreL;
         private TextBox txbDescripcionL;
         private TextBox txbPuntosL;

@@ -25,15 +25,15 @@ namespace Proyecto_Cine.Logros
         // =========================================
         private async Task CargarLogros()
         {
-            dgvLogros.DataSource = null;
+            dgDatosLog.DataSource = null;
 
             var logros = await _service.ObtenerLogros();
 
-            dgvLogros.DataSource = logros;
+            dgDatosLog.DataSource = logros;
 
-            cbLogro.DataSource = logros;
-            cbLogro.DisplayMember = "Nombre";
-            cbLogro.ValueMember = "Id";
+            comboBox1.DataSource = logros;
+            comboBox1.DisplayMember = "Nombre";
+            comboBox1.ValueMember = "Id";
         }
 
         // =========================================
@@ -41,12 +41,12 @@ namespace Proyecto_Cine.Logros
         // =========================================
         private void CargarCategorias()
         {
-            cbCategoria.Items.Clear();
+            comboBox1.Items.Clear();
 
-            cbCategoria.Items.Add("Asistencia");
-            cbCategoria.Items.Add("Canjes");
-            cbCategoria.Items.Add("VIP");
-            cbCategoria.Items.Add("Especiales");
+            comboBox1.Items.Add("Asistencia");
+            comboBox1.Items.Add("Canjes");
+            comboBox1.Items.Add("VIP");
+            comboBox1.Items.Add("Especiales");
         }
 
         // =========================================
@@ -57,7 +57,7 @@ namespace Proyecto_Cine.Logros
             dgvLogrosUsuarios.DataSource = null;
 
             var lista = await _service.ObtenerLogrosUsuario();
-
+              
             dgvLogrosUsuarios.DataSource = lista;
         }
 
@@ -66,14 +66,14 @@ namespace Proyecto_Cine.Logros
         // =========================================
         private void Limpiar()
         {
-            txtNombre.Clear();
-            txtDescripcion.Clear();
-            txtPuntos.Clear();
-            txtRequisitos.Clear();
+            txbNombreL.Clear();
+            txbDescripcionL.Clear();
+            txbPuntosL.Clear();
+            txbRequisitosL.Clear();
 
-            chkActivo.Checked = false;
+            cbActivoL.Checked = false;
 
-            cbCategoria.SelectedIndex = -1;
+            cmbCategoriaL.SelectedIndex = -1;
 
             logroSeleccionadoId = 0;
         }
@@ -86,31 +86,41 @@ namespace Proyecto_Cine.Logros
 
         private async void btnAgregarL_Click(object sender, EventArgs e)
         {
-            ModelLogro logro = new ModelLogro()
+            if (string.IsNullOrWhiteSpace(txbNombreL.Text) ||
+                 cmbCategoriaL.SelectedIndex < 0)
             {
-                Nombre = txbNombreL.Text,
-                Descripcion = txbDescripcionL.Text,
-                Puntos = Convert.ToInt32(txbPuntosL.Text),
-                Requisitos = txbRequisitosL.Text,
+                MessageBox.Show("Nombre y Categoría son obligatorios.");
+                return;
+            }
+
+            if (!int.TryParse(txbPuntosL.Text, out int puntos))
+            {
+                MessageBox.Show("Los puntos deben ser un número.");
+                return;
+            }
+
+            ModelLogro logro = new ModelLogro
+            {
+                Nombre = txbNombreL.Text.Trim(),
+                Descripcion = txbDescripcionL.Text.Trim(),
+                Puntos = puntos,
+                Requisitos = txbRequisitosL.Text.Trim(),
                 CategoriaId = cmbCategoriaL.SelectedIndex + 1,
                 Activo = cbActivoL.Checked,
                 FechaCreacion = DateTime.Now
             };
 
-            bool resultado =
-                await _service.AgregarLogro(logro);
+            bool resultado = await _service.AgregarLogro(logro);
 
             if (resultado)
             {
-                MessageBox.Show("Logro agregado");
-
+                MessageBox.Show("Logro agregado correctamente.");
                 await CargarLogros();
-
                 Limpiar();
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error al agregar el logro.");
             }
         }
 
@@ -128,12 +138,12 @@ namespace Proyecto_Cine.Logros
             ModelLogro logro = new ModelLogro()
             {
                 Id = logroSeleccionadoId,
-                Nombre = txtNombre.Text,
-                Descripcion = txtDescripcion.Text,
-                Puntos = Convert.ToInt32(txtPuntos.Text),
-                Requisitos = txtRequisitos.Text,
-                CategoriaId = cbCategoria.SelectedIndex + 1,
-                Activo = chkActivo.Checked
+                Nombre = txbNombreL.Text,
+                Descripcion = txbDescripcionL.Text,
+                Puntos = Convert.ToInt32(txbPuntosL.Text),
+                Requisitos = txbRequisitosL.Text,
+                CategoriaId = cmbCategoriaL.SelectedIndex + 1,
+                Activo = cbActivoL.Checked
             };
 
             bool resultado =
@@ -185,37 +195,35 @@ namespace Proyecto_Cine.Logros
 
         private async void btnAsignarL_Click(object sender, EventArgs e)
         {
-            ModelUsuario logroUsuario =new ModelUsuario()
-    {
-        UsuarioId =
-            Convert.ToInt32(txbUsuarioL.Text),
+            if (!int.TryParse(txbUsuarioL.Text, out int usuarioId))
+            {
+                MessageBox.Show("Ingresa un ID de usuario válido.");
+                return;
+            }
 
-        LogroId =
-            Convert.ToInt32(
-                cbLogro.SelectedValue
-            ),
+            if (comboBox1.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona un logro.");
+                return;
+            }
 
-        FechaObtencion = DateTime.Now
-    };
+            ModelUsuario logroUsuario = new ModelUsuario
+            {
+                UsuarioId = usuarioId,
+                LogroId = Convert.ToInt32(comboBox1.SelectedValue),
+                FechaObtencion = DateTime.Now
+            };
 
-            bool resultado =
-                await _service.AsignarLogro(
-                    logroUsuario
-                );
+            bool resultado = await _service.AsignarLogro(logroUsuario);
 
             if (resultado)
             {
-                MessageBox.Show(
-                    "Logro asignado"
-                );
-
+                MessageBox.Show("Logro asignado correctamente.");
                 await CargarLogrosUsuarios();
             }
             else
             {
-                MessageBox.Show(
-                    "Error al asignar"
-                );
+                MessageBox.Show("Error al asignar (puede que el usuario ya tenga ese logro).");
             }
         }
     }
